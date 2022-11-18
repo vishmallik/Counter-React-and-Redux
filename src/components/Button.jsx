@@ -3,24 +3,17 @@ import { decrement, increment, reset } from "../store/actions";
 
 function Button(props) {
   return (
-    <button
-      className={`btn ${props.type}`}
-      onClick={() => props.dispatch(resolveName(props.name))}
-    >
-      {props.name}
-    </button>
+    <>
+      <button className="btn inc" onClick={() => props.dispatch(increment())}>
+        Increment
+      </button>
+      <button className="btn dec" onClick={() => props.dispatch(decrement())}>
+        Decrement
+      </button>
+      <button className="btn reset" onClick={() => props.dispatch(reset())}>
+        Reset
+      </button>
+    </>
   );
-}
-function resolveName(name) {
-  switch (name) {
-    case "Increment":
-      return increment();
-    case "Decrement":
-      return decrement();
-    case "Reset":
-      return reset();
-    default:
-      reset();
-  }
 }
 export default connect()(Button);

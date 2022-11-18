@@ -1,5 +1,4 @@
 export function increment() {
-  console.log("1");
   return {
     type: "inc",
   };

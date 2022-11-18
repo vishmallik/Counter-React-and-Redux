@@ -8,9 +8,7 @@ function App(props) {
       <Header />
       <main>
         <div className="counter">{props.value}</div>
-        <Button name="Increment" type="inc" />
-        <Button name="Decrement" type="dec" />
-        <Button name="Reset" type="reset" />
+        <Button />
       </main>
     </>
   );
