@@ -2,6 +2,7 @@ import Button from "./Button";
 import Header from "./Header";
 import { connect } from "react-redux";
 import Steps from "./Steps";
+import Limit from "./Limit";
 
 function App(props) {
   return (
@@ -9,7 +10,10 @@ function App(props) {
       <Header />
       <main>
         <div className="counter">{props.value}</div>
-        <Steps />
+        <div class="flex wrapper wrap">
+          <Steps />
+          <Limit />
+        </div>
         <Button />
       </main>
     </>

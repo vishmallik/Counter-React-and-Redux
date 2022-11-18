@@ -19,3 +19,10 @@ export function steps(step) {
     payload: step,
   };
 }
+
+export function limit(max) {
+  return {
+    type: "changeLimit",
+    payload: max,
+  };
+}
