@@ -1,5 +1,4 @@
 export function increment() {
-  console.log("1");
   return {
     type: "inc",
   };
@@ -12,5 +11,11 @@ export function decrement() {
 export function reset() {
   return {
     type: "reset",
+  };
+}
+export function steps(step) {
+  return {
+    type: "changeSteps",
+    payload: step,
   };
 }

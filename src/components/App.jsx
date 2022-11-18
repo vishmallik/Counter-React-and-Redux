@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Header from "./Header";
 import { connect } from "react-redux";
+import Steps from "./Steps";
 
 function App(props) {
   return (
@@ -8,9 +9,8 @@ function App(props) {
       <Header />
       <main>
         <div className="counter">{props.value}</div>
-        <Button name="Increment" type="inc" />
-        <Button name="Decrement" type="dec" />
-        <Button name="Reset" type="reset" />
+        <Steps />
+        <Button />
       </main>
     </>
   );
